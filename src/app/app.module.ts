@@ -8,6 +8,8 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { TestPage } from '../pages/test-page/test-page';
 
+import { HomePage } from '../pages/home/home';
+
 const fireBaseConfig = {
   apiKey: "AIzaSyAgycg66M1r1q1iIWNVilEB5fW0ohsRkjk",
   authDomain: "tastyart-aa641.firebaseapp.com",
@@ -19,6 +21,7 @@ const fireBaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
+    HomePage,
     Page1,
     Page2,
     TestPage
@@ -30,6 +33,7 @@ const fireBaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
     Page1,
     Page2,
     TestPage
