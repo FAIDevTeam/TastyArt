@@ -6,24 +6,42 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="home"></ion-icon>
-    </button>
-    <button ion-button menuToggle>
-      <ion-icon name="search"></ion-icon>
-    </button>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="home"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Home?</ion-title>
-  </ion-navbar>
-
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-tabs>
-    <ion-tab [root]="chatRoot" tabTitle="Chat" tabIcon="chat"></ion-tab>
-  </ion-tabs>
+  <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button tappable value="new">
+        진행중인 행사
+      </ion-segment-button>
+      <ion-segment-button tappable value="hot">
+        예정 행사
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>광고위치?</ion-title>
+  </ion-toolbar>
+</ion-footer>
