@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+
+import { EventProgram } from '../../app/eventProgram/eventProgram';
+import { EventService } from '../../app/eventProgram/eventProgram.service';
 
 /*
   Generated class for the Home page.
@@ -11,30 +14,22 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  onGoingProgramList: EventProgram[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private eventService: EventService) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
 
-  slides = [
-    {
-      title: "Welcome to the Docs!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      image: "assets/img/kingfisher.jpg",
-    },
-    {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "assets/img/sea.jpg",
-    },
-    {
-      title: "What is Ionic Cloud?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      image: "assets/img/turtle.jpg",
-    }
-  ];
+  getEvents(): void{
+    this.eventService.getEvents().then(events => this.onGoingProgramList = events);
+  }
+
+  ngOnInit(): void{
+    this.getEvents();
+  }
 
 }
