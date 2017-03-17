@@ -17,6 +17,7 @@ import { EventService } from '../../app/eventProgram/eventProgram.service';
 export class HomePage implements OnInit{
 
   onGoingProgramList: EventProgram[];
+  selectTab: string = "onGoing";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private eventService: EventService) {}
 
@@ -24,12 +25,12 @@ export class HomePage implements OnInit{
     console.log('ionViewDidLoad HomePage');
   }
 
-  getEvents(): void{
-    this.eventService.getEvents().then(events => this.onGoingProgramList = events);
+  getEvents(selectedTab): void{
+    this.eventService.getEvents(selectedTab).then(events => this.onGoingProgramList = events);
   }
 
   ngOnInit(): void{
-    this.getEvents();
+    this.getEvents(this.selectTab);
   }
 
 }

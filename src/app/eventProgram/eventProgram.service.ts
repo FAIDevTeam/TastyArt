@@ -7,14 +7,17 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { EventProgram } from './eventProgram';
-import { Events } from './mock-events';
+import { Events, ScheduledEvents } from './mock-events';
 
 @Injectable()
 export class EventService{
 
   constructor(private http: Http){ }
 
-  getEvents(): Promise<EventProgram[]> {
-    return Promise.resolve(Events);
+  getEvents(selectedTab): Promise<EventProgram[]> {
+
+    if(selectedTab === 'onGoing') return Promise.resolve(Events);
+    else return Promise.resolve(ScheduledEvents);
+
   }
 }
