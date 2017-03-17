@@ -30,10 +30,10 @@
 <ion-content padding>
   <ion-toolbar>
     <ion-segment [(ngModel)]="selectTab">
-      <ion-segment-button tappable value="onGoing">
+      <ion-segment-button tappable value="onGoing" (ionSelect)="getEvents('onGoing')">
         진행중인 행사
       </ion-segment-button>
-      <ion-segment-button tappable value="scheduled">
+      <ion-segment-button tappable value="scheduled" (ionSelect)="getEvents('scheduled')">
         예정 행사
       </ion-segment-button>
     </ion-segment>
@@ -41,20 +41,20 @@
 
   <div [ngSwitch]="selectTab">
     <div *ngSwitchCase="'onGoing'">
-      <ion-card *ngFor="let onGoingProgram of onGoingProgramList">
-        <img [src]="onGoingProgram.image"/>
+      <ion-card *ngFor="let program of programList">
+        <img [src]="program.image"/>
         <ion-card-content>
-          <ion-card-title [innerHTML]="onGoingProgram.title"></ion-card-title>
-          <p [innerHTML]="onGoingProgram.description"></p>
+          <ion-card-title [innerHTML]="program.title"></ion-card-title>
+          <p [innerHTML]="program.description"></p>
         </ion-card-content>
       </ion-card>
     </div>
     <div *ngSwitchCase="'scheduled'">
-      <ion-card *ngFor="let onGoingProgram of onGoingProgramList">
-        <img [src]="onGoingProgram.image"/>
+      <ion-card *ngFor="let program of programList">
+        <img [src]="program.image"/>
         <ion-card-content>
-          <ion-card-title [innerHTML]="onGoingProgram.title"></ion-card-title>
-          <p [innerHTML]="'테스트'"></p>
+          <ion-card-title [innerHTML]="program.title"></ion-card-title>
+          <p [innerHTML]="program.description"></p>
         </ion-card-content>
       </ion-card>
     </div>
