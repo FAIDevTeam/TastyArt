@@ -5,8 +5,8 @@ import { AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import 'rxjs/add/operator/toPromise';
 
-import { EventProgram } from './eventProgram';
-import { Events, ScheduledEvents } from './mock-events';
+//import { EventProgram } from './eventProgram';
+//import { Events, ScheduledEvents } from './mock-events';
 
 @Injectable()
 export class EventService{
@@ -19,6 +19,9 @@ export class EventService{
 
     //if(selectedTab === 'onGoing') return Promise.resolve(Events);
     if(selectedTab === 'onGoing') return this.af.database.list('/eventTable');
-    else ScheduledEvents;
+    else return this.af.database.list('/ScheduledEvents');
   }
 }
+
+
+
