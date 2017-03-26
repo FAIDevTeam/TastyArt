@@ -1,23 +1,27 @@
-/**
- * Created by SDS on 2017-03-16.
- */
+
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
+import { AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import 'rxjs/add/operator/toPromise';
 
-import { EventProgram } from './eventProgram';
-import { Events, ScheduledEvents } from './mock-events';
+//import { EventProgram } from './eventProgram';
+//import { Events, ScheduledEvents } from './mock-events';
 
 @Injectable()
 export class EventService{
 
-  constructor(private http: Http){ }
+  //EventsByFirebase: FirebaseListObservable<EventProgram[]>;
 
-  getEvents(selectedTab): Promise<EventProgram[]> {
+  constructor(private http: Http, public af:AngularFire){}
 
-    if(selectedTab === 'onGoing') return Promise.resolve(Events);
-    else return Promise.resolve(ScheduledEvents);
+  getEvents(selectedTab): FirebaseListObservable<any> {
 
+    //if(selectedTab === 'onGoing') return Promise.resolve(Events);
+    if(selectedTab === 'onGoing') return this.af.database.list('/eventTable');
+    else return this.af.database.list('/ScheduledEvents');
   }
 }
+
+
+
