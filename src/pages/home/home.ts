@@ -4,6 +4,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { EventProgram } from '../../app/eventProgram/eventProgram';
 import { EventService } from '../../app/eventProgram/eventProgram.service';
 
+import { AngularFire, FirebaseListObservable} from 'angularfire2';
+
 /*
   Generated class for the Home page.
 
@@ -16,7 +18,8 @@ import { EventService } from '../../app/eventProgram/eventProgram.service';
 })
 export class HomePage implements OnInit{
 
-  programList: EventProgram[];
+  //programList: EventProgram[];
+  programList: FirebaseListObservable<any>;
   selectTab: string = "onGoing";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private eventService: EventService) {}
@@ -26,7 +29,7 @@ export class HomePage implements OnInit{
   }
 
   getEvents(selectedTab): void{
-    this.eventService.getEvents(selectedTab).then(events => this.programList = events);
+    this.programList = this.eventService.getEvents(selectedTab) ;
   }
 
   ngOnInit(): void{

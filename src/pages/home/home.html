@@ -41,7 +41,7 @@
 
   <div [ngSwitch]="selectTab">
     <div *ngSwitchCase="'onGoing'">
-      <ion-card *ngFor="let program of programList">
+      <ion-card *ngFor="let program of programList | async">
         <img [src]="program.image"/>
         <ion-card-content>
           <ion-card-title [innerHTML]="program.title"></ion-card-title>

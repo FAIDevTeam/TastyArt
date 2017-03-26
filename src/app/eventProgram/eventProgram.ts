@@ -1,5 +1,5 @@
 /**
- * Created by SDS on 2017-03-16.
+ * Created by Cho on 2017-03-16.
  */
 export class EventProgram {
   title: string;
