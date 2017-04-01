@@ -1,19 +1,32 @@
 {
   "eventTable": [
     {
-      "title": "Nine Inch Nails Live",
-      "description": "The Ionic Component Documentation showcases a number of useful components that are included out of the box with Ionic.",
-      "image": "assets/img/kingfisher.jpg"
+      "title": "2017 서울밤도깨비야시장",
+      "description": " 3월 24일부터 10월 29일까지 여의도 한강공원, 동대문디자인플라자 (DDP), 청계천, 청계광장, 반포 한강공원 등 서울의 대표적인 곳에서 '2017 서울밤도깨비야시장'이 열린다.</br>※ 행사 장소 : 여의도 한강공원 ,청계천 ,청계광장 ,반포 한강공원, 동대문디자인플라자 (DDP)",
+      "image": "assets/img/nightMarket/nightMarket_main.jpg",
+      "imgList": [
+        "assets/img/nightMarket/nightMarket_sub1.jpg",
+        "assets/img/nightMarket/nightMarket_sub2.jpg",
+        "assets/img/nightMarket/nightMarket_sub3.jpg"
+      ]
     },
     {
       "title": "What is Ionic?",
       "description": "Ionic Framework is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      "image": "assets/img/sea.jpg"
+      "image": "assets/img/sea.jpg",
+      "imgList": [
+        "assets/img/kingfisher.jpg",
+        "assets/img/turtle.jpg"
+      ]
     },
     {
       "title": "What is Ionic Cloud?",
       "description": "The Ionic Cloud is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      "image": "assets/img/turtle.jpg"
+      "image": "assets/img/turtle.jpg",
+      "imgList": [
+        "assets/img/kingfisher.jpg",
+        "assets/img/sea.jpg"
+      ]
     }
   ],
 
@@ -22,17 +35,29 @@
     {
       "title": "Scheduled 1",
       "description": "The Ionic Component Documentation showcases a number of useful components that are included out of the box with Ionic.",
-      "image": "assets/img/turtle.jpg"
+      "image": "assets/img/turtle.jpg",
+      "imgList": [
+        "assets/img/kingfisher.jpg",
+        "assets/img/sea.jpg"
+      ]
     },
     {
       "title": "Scheduled 2",
       "description": "Ionic Framework is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      "image": "assets/img/sea.jpg"
+      "image": "assets/img/sea.jpg",
+      "imgList": [
+        "assets/img/kingfisher.jpg",
+        "assets/img/sea.jpg"
+      ]
     },
     {
       "title": "Scheduled 3",
       "description": "The Ionic Cloud is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      "image": "assets/img/turtle.jpg"
+      "image": "assets/img/turtle.jpg",
+      "imgList": [
+        "assets/img/kingfisher.jpg",
+        "assets/img/sea.jpg"
+      ]
     }
   ]
 }

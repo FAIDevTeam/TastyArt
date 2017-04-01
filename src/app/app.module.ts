@@ -10,7 +10,7 @@ import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
 import { TestPage } from '../pages/test-page/test-page';
 
-import { HomePage } from '../pages/home/home';
+import { HomePage, ModalContentPage } from '../pages/home/home';
 
 const fireBaseConfig = {
   apiKey: "AIzaSyAgycg66M1r1q1iIWNVilEB5fW0ohsRkjk",
@@ -26,7 +26,8 @@ const fireBaseConfig = {
     HomePage,
     Page1,
     Page2,
-    TestPage
+    TestPage,
+    ModalContentPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -38,7 +39,8 @@ const fireBaseConfig = {
     HomePage,
     Page1,
     Page2,
-    TestPage
+    TestPage,
+    ModalContentPage
   ],
   providers: [AuthService, {provide: ErrorHandler, useClass: IonicErrorHandler}, EventService]
 })

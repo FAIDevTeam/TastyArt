@@ -41,20 +41,18 @@
 
   <div [ngSwitch]="selectTab">
     <div *ngSwitchCase="'onGoing'">
-      <ion-card *ngFor="let program of programList | async">
+      <ion-card *ngFor="let program of programList | async" (click)="openModal({eventObj: program})">
         <img [src]="program.image"/>
         <ion-card-content>
           <ion-card-title [innerHTML]="program.title"></ion-card-title>
-          <p [innerHTML]="program.description"></p>
         </ion-card-content>
       </ion-card>
     </div>
     <div *ngSwitchCase="'scheduled'">
-      <ion-card *ngFor="let program of programList | async">
+      <ion-card *ngFor="let program of programList | async" (click)="openModal({eventObj: program})">
         <img [src]="program.image"/>
         <ion-card-content>
           <ion-card-title [innerHTML]="program.title"></ion-card-title>
-          <p [innerHTML]="program.description"></p>
         </ion-card-content>
       </ion-card>
     </div>
