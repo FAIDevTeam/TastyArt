@@ -56,8 +56,7 @@ export class HomePage implements OnInit{
         </ion-title>
         <ion-buttons start>
           <button ion-button (click)="dismiss()">
-            <span ion-text color="primary" showWhen="ios">Cancel</span>
-            <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+            <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
           </button>
         </ion-buttons>
       </ion-toolbar>

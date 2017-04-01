@@ -28,16 +28,14 @@
 
 
 <ion-content padding>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="selectTab">
-      <ion-segment-button tappable value="onGoing" (ionSelect)="getEvents('onGoing')">
-        진행중인 행사
-      </ion-segment-button>
-      <ion-segment-button tappable value="scheduled" (ionSelect)="getEvents('scheduled')">
-        예정 행사
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+  <ion-segment [(ngModel)]="selectTab">
+    <ion-segment-button tappable value="onGoing" (ionSelect)="getEvents('onGoing')">
+      진행중인 행사
+    </ion-segment-button>
+    <ion-segment-button tappable value="scheduled" (ionSelect)="getEvents('scheduled')">
+      예정 행사
+    </ion-segment-button>
+  </ion-segment>
 
   <div [ngSwitch]="selectTab">
     <div *ngSwitchCase="'onGoing'">
