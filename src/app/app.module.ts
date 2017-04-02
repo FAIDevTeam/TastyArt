@@ -8,7 +8,7 @@ import {EventService } from './eventProgram/eventProgram.service';
 import { MyApp } from './app.component';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
-import { TestPage } from '../pages/test-page/test-page';
+import { SearchPage } from '../pages/test-page/test-page';
 
 import { HomePage, ModalContentPage } from '../pages/home/home';
 
@@ -20,13 +20,15 @@ const fireBaseConfig = {
   messagingSenderId: "1089029154751"
 }
 
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     Page1,
     Page2,
-    TestPage,
+    SearchPage,
     ModalContentPage
   ],
   imports: [
@@ -39,7 +41,7 @@ const fireBaseConfig = {
     HomePage,
     Page1,
     Page2,
-    TestPage,
+    SearchPage,
     ModalContentPage
   ],
   providers: [AuthService, {provide: ErrorHandler, useClass: IonicErrorHandler}, EventService]
