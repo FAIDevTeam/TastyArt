@@ -2,7 +2,7 @@
   "eventTable": [
     {
       "title": "2017 서울밤도깨비야시장",
-      "description": " 3월 24일부터 10월 29일까지 여의도 한강공원, 동대문디자인플라자 (DDP), 청계천, 청계광장, 반포 한강공원 등 서울의 대표적인 곳에서 '2017 서울밤도깨비야시장'이 열린다.</br>※ 행사 장소 : 여의도 한강공원 ,청계천 ,청계광장 ,반포 한강공원, 동대문디자인플라자 (DDP)",
+      "description": " 3월 24일부터 10월 29일까지 여의도 한강공원, 동대문디자인플라자 (DDP), 청계천, 청계광장, 반포 한강공원 등 서울의 대표적인 곳에서 '2017 서울밤도깨비야시장'이 열린다.<br/>※ 행사 장소 : 여의도 한강공원 ,청계천 ,청계광장 ,반포 한강공원, 동대문디자인플라자 (DDP)",
       "image": "assets/img/nightMarket/nightMarket_main.jpg",
       "imgList": [
         "assets/img/nightMarket/nightMarket_sub1.jpg",
@@ -11,21 +11,21 @@
       ]
     },
     {
-      "title": "What is Ionic?",
-      "description": "Ionic Framework is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      "image": "assets/img/sea.jpg",
+      "title": "롯데월드타워 개장",
+      "description": "롯데월드타워가 2017년 4월 3일(월)에 개장한다.<br/>건물높이 555m의 롯데월드타워 전망대는 세계에서 3번째, 아시아에서는 가장 높으며 롯데월드타워는 지하 6층, 지상 123층으로 이루어져 있다.",
+      "image": "assets/img/worldTower/worldTower_main.jpg",
       "imgList": [
-        "assets/img/kingfisher.jpg",
-        "assets/img/turtle.jpg"
+        "assets/img/worldTower/worldTower_sub1.jpg",
+        "assets/img/worldTower/worldTower_sub2.jpg"
       ]
     },
     {
-      "title": "What is Ionic Cloud?",
-      "description": "The Ionic Cloud is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      "image": "assets/img/turtle.jpg",
+      "title": "제13회 금천하모니 벚꽃축제",
+      "description": "함께 여는 벚꽃축제-제13회 금천하모니 벚꽃축제",
+      "image": "assets/img/cherry/cherry_main.jpg",
       "imgList": [
-        "assets/img/kingfisher.jpg",
-        "assets/img/sea.jpg"
+        "assets/img/cherry/cherry_sub1.jpg",
+        "assets/img/cherry/cherry_sub2.jpg"
       ]
     }
   ],
