@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavController } from 'ionic-angular';
 
 @Component({
   templateUrl: 'test-page.html'
@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 export class SearchPage {
   items;
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
+
     this.initializeItems();
+  }
+
+  onclickHome() {
+    this.navCtrl.pop();
   }
 
   initializeItems() {

@@ -4,7 +4,7 @@ import { ModalController, Platform, NavController, NavParams, ViewController  } 
 import { EventService } from '../../app/eventProgram/eventProgram.service';
 
 import { FirebaseListObservable} from 'angularfire2';
-
+import { SearchPage } from '../test-page/test-page';
 /*
   Generated class for the Home page.
 
@@ -16,6 +16,7 @@ import { FirebaseListObservable} from 'angularfire2';
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit{
+
 
   //programList: EventProgram[];
   programList: FirebaseListObservable<any>;
@@ -43,6 +44,10 @@ export class HomePage implements OnInit{
 
     let modal = this.modalCtrl.create(ModalContentPage, characterNum);
     modal.present();
+  }
+
+  clickSearch() {
+    this.navCtrl.push( SearchPage );
   }
 
 }
